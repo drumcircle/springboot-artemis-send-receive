@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  artemis:
+    image: "vromero/activemq-artemis"
+    environment:
+      - BASE_IMAGE=vromero/activemq-artemis
+      - ACTIVEMQ_ARTEMIS_VERSION=2.14.0
+      - ARTEMIS_USERNAME=admin
+      - ARTEMIS_PASSWORD=secret
+      - ENABLE_JMX_EXPORTER=true
+      - JMX_EXPORTER_VERSION=0.13.0
+    ports:
+      - 61616:61616
+      - 5672:5672
+      - 9404:9404
+#  log-server:
+#    image: springboot:v1
+#    env_file: ./docker-compose.env
+#    networks:
+#      test:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile.boot
+#    ports:
+#      - 8080:8080
+#      - 6565:6565

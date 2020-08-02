@@ -1,0 +1,14 @@
+server:
+  port: 8082
+
+spring:
+  jms:
+    pub-sub-domain: true
+  artemis:
+    mode: embedded
+    host: localhost
+    user: test
+    password: test
+    embedded:
+      queues: exasol-vpd-log
+      topics: exasol-vpd-log

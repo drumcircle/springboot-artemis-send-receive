@@ -1,0 +1,9 @@
+server:
+  port: 8082
+
+artemis:
+  broker-url: tcp://localhost:61616
+  queue: exasol-vpd-log
+  user: admin
+  password: secret
+
