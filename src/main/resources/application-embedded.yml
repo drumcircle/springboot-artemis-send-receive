@@ -1,14 +1,19 @@
 server:
   port: 8082
 
+artemis:
+  broker-url: tcp://localhost:61616
+  queue: exasol-vpd-log
+  user: admin
+  password: secret
+
 spring:
   jms:
     pub-sub-domain: true
   artemis:
     mode: embedded
     host: localhost
-    user: test
-    password: test
+    user: admin
+    password: secret
     embedded:
       queues: exasol-vpd-log
-      topics: exasol-vpd-log
